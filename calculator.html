@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dark Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="query-display" id="queryDisplay"></div>
+            <input type="text" class="display-input" id="display" placeholder="0" readonly>
+        </div>
+        
+        <div class="buttons">
+            <button class="btn clear ac" onclick="clearDisplay()">AC</button>
+            <button class="btn clear plusminus" onclick="toggleSign()" title="Plus/Minus">+/−</button>
+            <button class="btn clear percent" onclick="percentage()" title="Percentage">%</button>
+            <button class="btn operator divide" onclick="appendToDisplay('/')" title="Divide">÷</button>
+            
+            <button class="btn seven" onclick="appendToDisplay('7')">7</button>
+            <button class="btn eight" onclick="appendToDisplay('8')">8</button>
+            <button class="btn nine" onclick="appendToDisplay('9')">9</button>
+            <button class="btn operator multiply" onclick="appendToDisplay('*')" title="Multiply">×</button>
+            
+            <button class="btn four" onclick="appendToDisplay('4')">4</button>
+            <button class="btn five" onclick="appendToDisplay('5')">5</button>
+            <button class="btn six" onclick="appendToDisplay('6')">6</button>
+            <button class="btn operator subtract" onclick="appendToDisplay('-')" title="Subtract">−</button>
+            
+            <button class="btn one" onclick="appendToDisplay('1')">1</button>
+            <button class="btn two" onclick="appendToDisplay('2')">2</button>
+            <button class="btn three" onclick="appendToDisplay('3')">3</button>
+            <button class="btn equals" onclick="calculate()" title="Equals">=</button>
+            
+            <button class="btn zero" onclick="appendToDisplay('0')">0</button>
+            <button class="btn decimal" onclick="appendToDisplay('.')">.</button>
+            <button class="btn operator add" onclick="appendToDisplay('+')" title="Add">+</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
